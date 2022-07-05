@@ -1,5 +1,5 @@
 ﻿"""
- * This bot is made by u/Evillja aka Evil.
+ * This bot is made by u/Evillja aka Evil. If you're willing to use this code for anything, you need to ask me for it.
 """
 
 
