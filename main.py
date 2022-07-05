@@ -210,9 +210,6 @@ while True:
             imabot = "\n\n< *Ben bir botum. Bu yazıyı silmek için !remove* >\n\n< *Komutlara göz atmak için u/floodator help* >"
             time.sleep(7)
             item.mark_read()
-            prev = ""
-            asc = 0
-            parent = item
             content = item.body.replace("u/floodator ","").split("u/{} ".format(username))
             content = " ".join(content)
             text = content
