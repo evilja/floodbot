@@ -1,0 +1,27 @@
+Kullanıcılara açık özellikler:  
+  
+u/floodator \- Sadece etiket atarsanız rastgele bir flood yazar  
+  
+u/floodator add <flood adı> <flood> - Flood adı 1 kelime. Attığınız floodu bekleme sırasına alır ve adminler inceleyip kabul edebilir.  
+  
+u/floodator sum <flood adı> - Adını verdiğiniz floodu getirir  
+  
+u/floodator sumparent <flood adı> - Reply attığınız şeye floodu atar. Mesela bir posta attıysanız çağırma yorumunu o da posta atar  
+  
+u/floodator ara <kelime> flood arar ve bulduğu ilk 10 floodu listeler. reply atıp .<1-10> şeklinde yanıt verirseniz o floodu gönderir.  
+  
+Adminlere özel: Adminler lokumisadog,apklidomaltan,bulgurlusikerten ve tüm KGBTR modları.  
+  
+u/floodator onay - Attığınız replyin parentinde add komutu kullanılmışsa o floodu onaylar  
+  
+u/floodator sil - Bunu sadece botun attığı yorumlara yazabilirsiniz. Floodu ayrıştırıp bu içeriğe sahip tüm floodları onaylanmış floodlardan siler.  
+  
+u/floodator değiştir <flood adı> - Parentteki floodu adını verdiğiniz floodun yerine koyar. Botun yorumlarında kullanmayın  
+  
+u/floodator hizliekle <flood adı> - Parentteki floodu onay gerekmeden direkt ekler. Bunu da botun yorumlarına kullanmayın  
+  
+u/floodator predef <kelime> <flood adı> - Postta o kelime geçiyorsa atılacak flood adı  
+  
+!remove - Parentteki yazıyı siler.  
+  
+Bu botu reddit hesabı 2 aydan ufak amk newleri kullanamaz
