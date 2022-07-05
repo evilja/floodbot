@@ -78,7 +78,7 @@ def setPredef(kw,fname):
     pass
 def addFlood(fname,flood):
     fname = fname.lower()
-    if os.path.exists("floodlar\\{}.flood".format(fname)) or os.path.exists("C:\\Users\\aureai\\Desktop\\bot\\tmpfloodlar\\{}.flood".format(fname)):
+    if os.path.exists("floodlar\\{}.flood".format(fname)) or os.path.exists("tmpfloodlar\\{}.flood".format(fname)):
         return "< *Flood zaten var. Bir yanlışlık olduğunu düşünüyorsan nyancat#6010 dc'ine yazabilirsin* >"
 
     if len(flood) > 8000:
