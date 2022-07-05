@@ -95,7 +95,7 @@ def addFlood(fname,flood):
     return "< *Floodunuz onay sürecine alındı bu 5 dakikadan 1 güne kadar alabilir* >"
 def addQFlood(fname,flood):
     fname = fname.lower()
-    if os.path.exists("floodlar\\{}.flood".format(fname)) or os.path.exists("C:\\Users\\aureai\\Desktop\\bot\\tmpfloodlar\\{}.flood".format(fname)):
+    if os.path.exists("floodlar\\{}.flood".format(fname)) or os.path.exists("tmpfloodlar\\{}.flood".format(fname)):
         return "< *QFlood zaten var. Bir yanlışlık olduğunu düşünüyorsan nyancat#6010 dc'ine yazabilirsin* >"
 
     if len(flood) > 8000:
