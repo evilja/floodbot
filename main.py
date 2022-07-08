@@ -1,5 +1,5 @@
 ﻿"""
- * This bot is made by u/Evillja aka Evil. If you're willing to use this code for anything, you have to ask me for it.
+ * This bot is made by u/Evillja aka Evil.
 """
 
 
@@ -8,13 +8,12 @@ import praw
 import os
 import sys
 import time
-import openai
 import random
 
-client_id     = ""
-client_secret = ""
-username      = ""
-password      = ""
+client_id     = "-db3s0retlCDWhNvCE6Jkw"
+client_secret = "jRdhS6s9o1Ib_aIk3-4NCo62kir_-w"
+username      = "floodator"
+password      = "floodaccLara776"
 user_agent = f"User-Agent: linux:com.{username}s.runner:v1.0 (by /u/{username}s)"
 reddit = praw.Reddit(client_id = client_id,
                      client_secret = client_secret,
@@ -78,7 +77,7 @@ def setPredef(kw,fname):
     pass
 def addFlood(fname,flood):
     fname = fname.lower()
-    if os.path.exists("floodlar\\{}.flood".format(fname)) or os.path.exists("tmpfloodlar\\{}.flood".format(fname)):
+    if os.path.exists("floodlar\\{}.flood".format(fname)) or os.path.exists("C:\\Users\\aureai\\Desktop\\bot\\tmpfloodlar\\{}.flood".format(fname)):
         return "< *Flood zaten var. Bir yanlışlık olduğunu düşünüyorsan nyancat#6010 dc'ine yazabilirsin* >"
 
     if len(flood) > 8000:
@@ -95,7 +94,7 @@ def addFlood(fname,flood):
     return "< *Floodunuz onay sürecine alındı bu 5 dakikadan 1 güne kadar alabilir* >"
 def addQFlood(fname,flood):
     fname = fname.lower()
-    if os.path.exists("floodlar\\{}.flood".format(fname)) or os.path.exists("tmpfloodlar\\{}.flood".format(fname)):
+    if os.path.exists("floodlar\\{}.flood".format(fname)) or os.path.exists("C:\\Users\\aureai\\Desktop\\bot\\tmpfloodlar\\{}.flood".format(fname)):
         return "< *QFlood zaten var. Bir yanlışlık olduğunu düşünüyorsan nyancat#6010 dc'ine yazabilirsin* >"
 
     if len(flood) > 8000:
@@ -189,6 +188,7 @@ def ara(keywords):
                 if not keyword in flood.lower():
                     fnd = False
 
+
             if fnd:
                 found.append(flood)
 
@@ -197,19 +197,29 @@ def ara(keywords):
 imabot = "\n\n< *Ben bir botum. Bu yazıyı silmek için !remove* >\n\n< *Komutlara göz atmak için u/floodator help* >"
 revel = 0
 bots = ["kerbal_galactic","indirbeni","koyunkirpan","savevideo"]
-approved = ["goktugh"]
+approved = ["goktugh","lokumisadog2"]
 print("!!! Başlatıldı")
 nowtime = time.time()
+
+
+
+# SABİT DEĞİŞKENLER
+SUB_RANDOM_FLOOD = 7
+INBOX_READ = 10
+#
 while True:
 
     try:
         time.sleep(1)
         revel += 1
 
-        for item in list(reddit.inbox.unread(limit=10))[::-1]:
+        for item in list(reddit.inbox.unread(limit=INBOX_READ))[::-1]:
             imabot = "\n\n< *Ben bir botum. Bu yazıyı silmek için !remove* >\n\n< *Komutlara göz atmak için u/floodator help* >"
             time.sleep(7)
             item.mark_read()
+            prev = ""
+            asc = 0
+            parent = item
             content = item.body.replace("u/floodator ","").split("u/{} ".format(username))
             content = " ".join(content)
             text = content
@@ -583,18 +593,13 @@ while True:
             continue
         canComment = False
         itemno = 0
-        for item in list(subreddit.new(limit=3))[::-1]:
-            ttime = time.time()-7
-            if ttime <= nowtime:
-                nowtime = time.time()
-            else:
-                break
+        for item in list(subreddit.new(limit=SUB_RANDOM_FLOOD))[::-1]:
             if item in checkReply():
                 canComment = False
                 break
             itemno += 1
             canComment = True
-        if canComment == True and itemno >= 3:
+        if canComment == True and itemno >= SUB_RANDOM_FLOOD:
             iList = []
             for item in list(subreddit.new(limit=5))[::-1]:
                 setReplied(item.id)
