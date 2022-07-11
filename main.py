@@ -10,10 +10,10 @@ import sys
 import time
 import random
 
-client_id     = "-db3s0retlCDWhNvCE6Jkw"
-client_secret = "jRdhS6s9o1Ib_aIk3-4NCo62kir_-w"
-username      = "floodator"
-password      = "floodaccLara776"
+client_id     = ""
+client_secret = ""
+username      = ""
+password      = ""
 user_agent = f"User-Agent: linux:com.{username}s.runner:v1.0 (by /u/{username}s)"
 reddit = praw.Reddit(client_id = client_id,
                      client_secret = client_secret,
